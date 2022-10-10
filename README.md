@@ -22,6 +22,11 @@
 1. https://qiita.com/kashimuuuuu/items/b5f35057dfe1980d053a
 2. https://knowledge.sakura.ad.jp/2210/#Docker_Hub-2
 
+### 実行コマンド
+```bash
+docker-compose up -d
+```
+
 ### エラーと解消方法
  1 `Error response from daemon: dial unix docker.raw.sock: connect: connection refused`
 
@@ -42,3 +47,22 @@
 ```
 解決方法
 Dockerにサインインできてなかったことが原因のため、サインインする
+
+2 `denied: requested access to the resource is denied`
+```
+    ~/nameko_git/1hour-challenge main
+    ❯ docker push 1hour-challenge_frontend:latest
+    The push refers to repository [docker.io/library/1hour-challenge_frontend]
+    3475b668e2e7: Preparing 
+    8f2b79d5328d: Preparing 
+    693214157724: Preparing 
+    f2f715b72340: Preparing 
+    9e8a8e4e0b92: Preparing 
+    2fbabeba902e: Waiting 
+    ee509ed6e976: Waiting 
+    9177197c67d0: Waiting 
+    7dbadf2b9bd8: Waiting 
+    e7597c345c2e: Waiting 
+    denied: requested access to the resource is denied
+```
+解決方法
